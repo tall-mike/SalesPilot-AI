@@ -1,25 +1,13 @@
-# SalesPilot-AI
-SalesPilot AI  SalesPilot AI is an intelligent sales assistant designed to help businesses find new customers and automate cold outreach.
-The platform searches the web for potential buyers, identifies qualified leads, extracts available business information such as company names, websites, and contact details, generates personalized cold emails using AI, and automates outreach campaigns.
+# SalesPilot AI
 
-Built for manufacturers, distributors, wholesalers, and B2B businesses, SalesPilot AI reduces the time spent on prospecting and helps sales teams reach more customers with less manual work.
+SalesPilot AI is an AI-powered sales outreach assistant that helps businesses discover prospects online, generate tailored cold emails, and track outreach activity.
 
-Core Features
-AI-powered lead discovery
-Online company research
-Contact and business information extraction
-Personalized cold email generation
-Bulk outreach automation
-Campaign management
-Lead tracking and analytics
-Ideal Users
-Manufacturers
-FMCG companies
-Food and beverage businesses
-Sales teams
-Distributors
-Marketing agencies
-Small and medium-sized businesses
-Mission
+## Project structure
 
-To help businesses discover more customers, automate sales outreach, and grow revenue using artificial intelligence.
+- frontend: Vite + React + TypeScript SaaS UI
+- api: Python FastAPI backend for search and lead processing
+
+## Local development
+
+- Frontend: npm install && npm run dev inside frontend/
+- Backend: python api/index.py or uvicorn api.index:app --reload

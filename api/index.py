@@ -35,11 +35,13 @@ def root():
 
 
 @app.get("/health")
+@app.get("/api/health")
 def health():
     return {"status": "ok"}
 
 
 @app.post("/search")
+@app.post("/api/search")
 def search_leads(payload: dict):
     query = (payload.get("query") or "").strip()
     if not query:

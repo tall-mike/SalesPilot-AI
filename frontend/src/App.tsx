@@ -112,7 +112,7 @@ function AppShell() {
     setSearchResults([]);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/search", {
+      const response = await fetch("/api/search", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query: value, max_results: 6 }),
@@ -162,7 +162,7 @@ function AppShell() {
           id: prev.length + 1,
           role: "assistant",
           content:
-            "The live search service is currently unavailable. Please make sure the backend is running on port 8000.",
+            "The live search service is currently unavailable. Please try again in a moment.",
         },
       ]);
     } finally {
