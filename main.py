@@ -11,6 +11,8 @@ SELLER_NAME = "Sweet Mouth Bakery"
 CONTACT_PERSON = "Okafor John"
 PRODUCT_DESCRIPTION = "biscuits in bulk"
 
+app = None
+
 
 def run_search(user_request):
     """One full round: search -> qualify -> enrich with email/phone."""
