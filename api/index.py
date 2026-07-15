@@ -3,7 +3,7 @@ import sys
 from pathlib import Path
 
 from fastapi import FastAPI
-from fastapi.responses import JSONResponse
+from fastapi.responses import HTMLResponse, JSONResponse
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.append(str(ROOT))
@@ -16,6 +16,22 @@ app = FastAPI(title="SalesPilot AI")
 SELLER_NAME = "Sweet Mouth Bakery"
 CONTACT_PERSON = "Okafor John"
 PRODUCT_DESCRIPTION = "biscuits in bulk"
+
+
+@app.get("/")
+def root():
+    return HTMLResponse(
+        """
+        <html>
+          <head><title>SalesPilot AI</title></head>
+          <body style='font-family: Arial, sans-serif; padding: 2rem; background:#f8fbff;'>
+            <h1>SalesPilot AI API</h1>
+            <p>This is the backend for SalesPilot AI.</p>
+            <p>Use <code>/health</code> for health checks and <code>/search</code> for lead searches.</p>
+          </body>
+        </html>
+        """
+    )
 
 
 @app.get("/health")
